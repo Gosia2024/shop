@@ -1,20 +1,22 @@
 const product1 = { price: 10, title: 'JS od podstaw' };
 const product2 = { price: '20', title: 'PHP od podstaw' };
+const product3 = { price: '20', title: 'PHP od podstaw'}
 const discount = 10;
 
 //add products to table
 const itemsContainer = document.querySelector('#items')
+let conuter = 1;
+function addItem(item){
 itemsContainer.innerHTML += `   <tr>
-        <td>${product1.title}</td>
+         <td>${conuter++}</td>
+        <td>${item.title}</td>
         <td>1</td>
-        <td>${product1.price}</td>
-      </tr>`
-itemsContainer.innerHTML += ` <tr>
-        <td>${product2.title}</td>
-        <td>1</td>
-        <td>${product2.price}</td>
-      </tr>
-`
+        <td>${item.price}</td>
+      </tr>`;
+
+}
+addItem(product1)
+addItem(product2)
 
 
 if (isNaN (+ product2.price)){
