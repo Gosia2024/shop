@@ -18,6 +18,14 @@ itemsContainer.innerHTML += `   <tr>
 addItem(product1)
 addItem(product2)
 
+// add discount
+const discountContainer= document.querySelector('#discount-amount')
+discountContainer.innerHTML = discount
+
+if(discount === 0){
+//document.querySelector('#discount').style.display ='none'
+document.querySelector('#discount').classList.add('hidden')
+}
 
 if (isNaN (+ product2.price)){
     console.log('Podano niepoprwany typ danych')
